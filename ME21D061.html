@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ReistrationForm</title>
+</head>
+<body>
+
+
+</html><!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			margin-top: 8%;
+			width: 400px;
+			border: 3px solid skyblue;
+			padding: 20px;
+		}
+		body{
+			background:black;
+			color: white;
+		}
+		h2{
+			font-family: FF DIN;
+			text-decoration: underline;
+			margin-top: 30px;
+		  width: 60%;
+		  padding: 10px;
+		  margin-left:505px ;
+		  font-size: 45px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<?php
+			if(isset($_POST['create'])){
+				$firstname  = $_POST['firstname'];
+				$lastname   = $_POST['lastname'];
+				$phoneno    = $_POST['phoneno'];
+				$email      = $_POST['email'];
+				$password   = $_POST['password'];
+
+				echo $firstname ." ".$lastname ." ".$phoneno ." ".$email ." ".$password; 
+			}
+		?>
+	</div>
+	<h2>Registration Form</h2>
+	<div class="container">
+		
+	<form action="bootstrapform.php" method="post">
+		<div class="form-group">
+    <label for="firstname"><b>First Name</b></label>
+    <input type="text" class="form-control" id="exampleInputfirstname" name="firstname">
+  </div>
+  <div class="form-group">
+    <label for="lastname"><b>Last Name</b></label>
+    <input type="text" class="form-control" id="exampleInputlastname" name="lastname">
+  </div>
+  <div class="form-group">
+    <label for="phoneno"><b>Phone Number</b></label>
+    <input type="text" class="form-control" id="exampleInputphoneno" name="phoneno">
+  </div>
+  <div class="form-group">
+    <label for="Email1"><b>Email address</b></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+  </div>
+  <div class="form-group">
+    <label for="Password"><b>Password</b></label>
+    <input type="password" class="form-control" id="exampleInputPassword" name="password">
+  </div>
+  
+  <button type="Submit" class="btn btn-outline-success"><b>Submit</b></button>
+</form>
+</div>
+<footer align = "center">
+	<h3>&copy; prathmesh shahu | Department of Mechanical Engineering |USN: ME21D061 |S. B Jain,Nagpur</h3>
+</footer>
+</body>
+</html>
